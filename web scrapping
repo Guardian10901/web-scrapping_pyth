@@ -1,0 +1,14 @@
+### website scrapping
+
+from bs4 import BeautifulSoup
+import requests
+import pandas as pd
+
+
+url="https://www.studentnewsdaily.com/archive/daily-news-article/"
+
+
+#1.call the API server using request module
+result=requests.get(url)
+soup=BeautifulSoup(result.content,'lxml')
+print(soup)
